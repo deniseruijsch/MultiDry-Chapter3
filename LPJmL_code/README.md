@@ -22,7 +22,7 @@ All other model components are based on LPJmL 5.10.1.
 Original LPJmL source code:  
 https://github.com/PIK-LPJmL/LPJmL
 
-Please cite the original LPJmL publications when using this code.
+Please also cite the original LPJmL publications when using this code.
 
 ### Licence
 
