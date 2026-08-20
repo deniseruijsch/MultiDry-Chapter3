@@ -1,0 +1,516 @@
+--------------------------------------
+Running config: /home/druijsch/LPJmL5/dev15oct2025/config_files/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/spinup/configs/boreal_needleleaved_summergreen_tree_patch5_config_restart.cjson
+SLURM task ID: 8
+Node: tcn486.local.snellius.surf.nl
+--------------------------------------
+******************************************************************************
+****        _     ____     _           _       ____        _  ___         ****
+****       | |   |  _ \   | |_ __ ___ | |     | ___|      / |/ _ \        ****
+****       | |   | |_) |  | | '_ ` _ \| |     |___ \      | | | | |       ****
+****       | |___|  __/ |_| | | | | | | |___   ___) |  _  | | |_| |       ****
+****       |_____|_|   \___/|_| |_| |_|_____| |____/  (_) |_|\___/        ****
+****                                                                      ****
+****                 lpjml C Version 5.10.1 (Apr 14 2026)                 ****
+****    Dynamic global vegetation model with natural and managed land     ****
+****                     Compiled for Linux with MPI                      ****
+****       (C) Potsdam Institute for Climate Impact Research (PIK),       ****
+****                          see COPYRIGHT file                          ****
+****              Authors, and contributors see AUTHORS file              ****
+**** This version of LPJmL is licensed under GNU AGPL Version 3 or later  ****
+****        See LICENSE file or go to http://www.gnu.org/licenses/        ****
+****                 or invoke lpjml -l to print license                  ****
+****      https://gitlab.pik-potsdam.de/lpjml/wur_team/lpjml-wur.git      ****
+****          GIT hash: 5e6f8e1bb5c5d5f3357da68b6c43e9517864f3c2          ****
+****                                                                      ****
+******************************************************************************
+
+Running for user druijsch on tcn486.local.snellius.surf.nl at Tue Apr 14 17:30:52 2026
+Reading configuration from '/home/druijsch/LPJmL5/dev15oct2025/config_files/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/spinup/configs/boreal_needleleaved_summergreen_tree_patch5_config_restart.cjson'.
+==============================================================================
+/----------------------------------------------------------\
+|institution: Potsdam Institute for Climate Impact Research|
+|contact:                                                  |
+|comment:                                                  |
+\----------------------------------------------------------/
+Simulation "LPJmL Run" running on 50 tasks
+Simulation with shuffle spinup climate, nitrogen limitation, permafrost, 
+Johansen conductivity, percolation heattransfer, GSI phenology, 
+NPP controlled BNF, land use, potential irrigation, 
+others to crop "maize" and "temperate cereals", land-use change timber, 
+fixed residue remove, with auto fertilizer, pft.cjson LAImax, 
+livestock grazing, bondau2007 crop PHU option, separate harvests.
+Cultivation types: none, biomass, annual crop
+Working directory: /gpfs/home5/druijsch/LPJmL5/dev15oct2025
+cpp processed configuration file written to `/projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/`.
+Starting from restart file '/home/druijsch/LPJmL5/dev15oct2025/restart/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/restart_1901_nv_stdfire.lpj'.
+Input files:
+Variable     Fmt  Varname  Filename
+------------ ---- -------- ---------------------------------------------------
+soil         cdf  soilcode /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/soil.nc
+temp         cdf  tas      /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/temp.nc
+prec         cdf  pr       /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/prec.nc
+lwdown       cdf  rlds     /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/lwdown.nc
+swdown       cdf  rsds     /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/swdown.nc
+no3_depo     cdf  noy      /projects/prjs2023/chapter3/lpjml_input/ndep-noy_histsoc_monthly_1901_2021_units.nc
+nh4_depo     cdf  nhx      /projects/prjs2023/chapter3/lpjml_input/ndep-nhx_histsoc_monthly_1901_2021_units.nc
+soilpH       cdf  soil_ph  /projects/prjs2023/chapter3/lpjml_input/hwsd_soil_data_all_land_oceanfilled.nc
+co2          txt           /projects/prjs2023/chapter3/lpjml_input/co2_1832-2023.dat
+windspeed    cdf  sfcwind  /projects/prjs2023/chapter3/lpjml_input/run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/wind.nc
+countries    cdf  country  /projects/prjs2023/chapter3/lpjml_input/regridded_cow_full_2018_5min_reduced_filled.nc
+landuse      cdf  CFTfrac  /projects/prjs2023/chapter3/lpjml_input/MAPSPAM_2020_crops_filled_ESA_01deg_v7.nc
+------------ ---- -------- ---------------------------------------------------
+Writing restart file '/home/druijsch/LPJmL5/dev15oct2025/restart/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/restart_1960_crop_stdfire_base.lpj' after year 1960.
+Reading random seeds from restart file.
+Number of output files:       65
+Output written in year:       1901
+Byte order in output files:   little endian
+
+Compression level for NetCDF: 3
+Missing value in NetCDF:      -1e+32
+Base year in NetCDF:          1901
+NetCDF grid:                  local
+Variable            Fmt  Unit        Type   tstep nbd Filename
+------------------- ---- ----------- ------ ----- --- -------------------------
+albedo              cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/malbedo.nc + .json
+cftfrac             cdf  -           float  year   32 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/cftfrac.nc + .json
+discharge           cdf  hm3/day     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mdischarge.nc + .json
+evap                cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mevap.nc + .json
+fapar               cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mfapar.nc + .json
+firec               cdf  gC/m2/yr    float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/firec.nc + .json
+firef               cdf  1           float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/firef.nc + .json
+flux_estabc         cdf  gC/m2/yr    float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/flux_estab.nc + .json
+fpc                 cdf  -           float  month  12 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/fpc.nc + .json
+globalflux          txt  -           float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/globalflux.csv + .json
+gpp                 cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mgpp.nc + .json
+litc                cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/litc.nc + .json
+litn                cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/litn.nc + .json
+npp                 cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mnpp.nc + .json
+nuptake             cdf  gN/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mnuptake.nc + .json
+pet                 cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mpet.nc + .json
+pft_chawo           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_chawo.nc + .json
+pft_cleaf           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_cleaf.nc + .json
+pft_croot           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_croot.nc + .json
+pft_csapw           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_csapw.nc + .json
+pft_fpar            cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_fpar.nc + .json
+pft_gpp             cdf  gC/m2/month float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_gpp.nc + .json
+pft_laimax          cdf  m2/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_laimax.nc + .json
+pft_mort            cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_mort.nc + .json
+pft_mort_background cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_mort_background.nc + .json
+pft_mort_drought    cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_mort_drought.nc + .json
+pft_mort_heat       cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_mort_heat.nc + .json
+pft_nind            cdf  ind/m²     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_nind.nc + .json
+pft_nleaf           cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_nleaf.nc + .json
+pft_npp             cdf  gC/m2/yr    float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_npp.nc + .json
+pft_nroot           cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_nroot.nc + .json
+pft_nuptake         cdf  gN/m2/yr    float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_nuptake.nc + .json
+pft_phen            cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_phen.nc + .json
+pft_survive_frac    cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_survive_frac.nc + .json
+pft_vegc            cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_vegc.nc + .json
+pft_vegn            cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_vegn.nc + .json
+pft_water_demand    cdf  mm/yr       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/pft_water_demand.nc + .json
+phen_light          cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mphen_light.nc + .json
+phen_tmax           cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mphen_tmax.nc + .json
+phen_tmin           cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mphen_tmin.nc + .json
+phen_water          cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mphen_water.nc + .json
+rd                  cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/rd.nc + .json
+rh                  cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mrh.nc + .json
+runoff              cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mrunoff.nc + .json
+soilc               cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilc.nc + .json
+soilc_layer         cdf  gC/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilc_layer.nc + .json
+soiln               cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soiln.nc + .json
+soiln_layer         cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soiln_layer.nc + .json
+soilnh4             cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilnh4.nc + .json
+soilnh4_layer       cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilnh4_layer.nc + .json
+soilno3             cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilno3.nc + .json
+soilno3_layer       cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/soilno3_layer.nc + .json
+soiltemp1           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/msoiltemp1.nc + .json
+soiltemp2           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/msoiltemp2.nc + .json
+soiltemp3           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/msoiltemp3.nc + .json
+swc1                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mswc1.nc + .json
+swc2                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mswc2.nc + .json
+swc3                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mswc3.nc + .json
+swc4                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mswc4.nc + .json
+swc5                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mswc5.nc + .json
+transp              cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mtransp.nc + .json
+vegc                cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/vegc.nc + .json
+vegn                cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/vegn.nc + .json
+wateramount         cdf  hm3         float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/mwateramount.nc + .json
+wscal               cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_08_run_for_10_locations/boreal_needleleaved_summergreen_tree/patch_5/output/wscal.nc + .json
+------------------- ---- ----------- ------ ----- --- -------------------------
+Spinup years:                   180
+Cycle length during spinup:      30
+First year:                    1901
+Last year:                     2019
+Number of grid cells:            72
+==============================================================================
+Memory allocated for output: 7,096 bytes/cell
+Simulation begins...
+Spinup using climate starting from year 1901
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1721 140.538   0.011   0.000   0.000 140.549   246212.7 155271.2 15321.2     0.0 21962.7    441.6   814.4  1875.7
+  1722 164.658   0.010   0.000   0.000 164.668   244131.6 154614.3 21230.8     0.0 16244.5    917.4   782.8  1922.8
+  1723 -214.409   0.004   0.000   0.000 -214.404   198723.2 192815.4 37668.7     0.0 14569.0    461.2  1109.9  1872.7
+  1724 186.191   0.009   0.000   0.000 186.201   260527.5 162742.9 14402.2     0.0 19937.5    800.3   752.2  1980.5
+  1725 -329.886   0.031   0.000   0.000 -329.855   190612.4 211475.7 26036.1     0.0  5224.6    315.9  1976.4  1745.7
+  1726 -133.264  -0.001   0.000   0.000 -133.265   188113.4 190338.4 15185.7     0.0 13693.4    195.6   928.0  1668.5
+  1727   0.170   0.013   0.000   0.000   0.183   202527.1 176686.3 11680.5     0.0 16485.9    310.5   938.1  1740.9
+  1728  84.460   0.012   0.000   0.000  84.472   221015.4 153559.9 10015.3     0.0 13387.6    635.1   878.1  2032.7
+  1729 153.088   0.009   0.000   0.000 153.097   272342.5 157255.2 13552.1     0.0 20908.4    906.9   970.9  2180.1
+  1730 -25.150   0.006   0.000   0.000 -25.144   222797.1 192542.7 22477.4     0.0 12461.3    328.3  2012.4  1813.6
+  1731  -7.794   0.009   0.000   0.000  -7.786   254858.1 182842.9 21106.4     0.0 19428.3    198.2  1155.5  1668.0
+  1732 -49.662   0.008   0.000   0.000 -49.655   251595.6 207927.8 28490.2     0.0 12396.0    278.3  2148.2  1770.4
+  1733 -470.272   0.011   0.000   0.000 -470.261   283802.6 177128.5 20875.6     0.0 26088.2    186.7  4383.3  1676.8
+  1734 -310.598   0.008   0.000   0.000 -310.590   289410.7 211419.6 34573.2     0.0 15137.5    101.9  3716.7  1615.8
+  1735 186.083   0.009   0.000   0.000 186.092   288461.3 183056.0 30591.8     0.0 21189.1    121.0  1724.9  1614.3
+  1736 -18.945   0.003   0.000   0.000 -18.942   249053.8 187312.3 32980.0     0.0 16441.6    132.3  1421.6  1634.9
+  1737  94.321   0.006   0.000   0.000  94.327   237760.4 185307.3 19591.3     0.0 18489.8    115.5  1156.8  1619.2
+  1738 -60.124   0.023   0.000   0.000 -60.101   173842.8 133972.6  5936.4     0.0  1678.5    108.9  1682.6  1603.2
+  1739 -61.607  -0.017   0.000   0.000 -61.624   199930.1 194327.4 14631.6     0.0 17642.1    133.3  1646.4  1658.4
+  1740  65.528   0.012   0.000   0.000  65.540   255999.0 196780.0 18032.4     0.0 16249.3    354.4  2621.4  1872.8
+  1741 -280.291   0.026   0.000   0.000 -280.266   196595.7 219238.5 20619.9     0.0 11872.6    137.7  4454.9  1655.7
+  1742  90.946  -0.001   0.000   0.000  90.946   253295.6 206956.6 19049.9     0.0 22371.8    581.9  2341.6  1817.1
+  1743 -54.011   0.013   0.000   0.000 -53.998   242490.2 205366.8 25362.2     0.0 11640.7    207.6  3856.1  1682.1
+  1744 -480.378   0.013   0.000   0.000 -480.365   271061.9 177940.6 15996.2     0.0 24852.5    182.8  5903.7  1685.7
+  1745 -325.284  -0.006   0.000   0.000 -325.290   247913.7 206199.1 21203.8     0.0 16844.9     89.6  2756.2  1610.5
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1746 161.686   0.015   0.000   0.000 161.701   249309.9 164176.1 17040.5     0.0 15359.3    133.0  1769.1  1640.5
+  1747 210.058   0.015   0.000   0.000 210.073   251106.3 209138.7 30500.4     0.0 15676.1    167.2  1711.3  1716.0
+  1748 199.782   0.014   0.000   0.000 199.796   257284.9 211467.9 32562.6     0.0 16208.4    145.9  2085.5  1687.7
+  1749  82.224   0.013   0.000   0.000  82.238   221989.0 179369.9 17122.8     0.0 18137.0    157.9  1326.2  1673.6
+  1750 -42.231   0.013   0.000   0.000 -42.218   222576.1 172606.6 28702.8     0.0 17808.0    272.3  1578.7  1761.9
+  1751 -596.132   0.015   0.000   0.000 -596.117   256574.2 177732.2 20995.8     0.0 21331.7    219.1  5989.7  1720.2
+  1752 -229.199   0.008   0.000   0.000 -229.191   269818.3 189653.5 16838.1     0.0 21106.5     99.2  3279.0  1629.3
+  1753 120.327   0.005   0.000   0.000 120.332   259329.5 178331.3 29595.3     0.0 17078.2    164.6  2264.4  1658.4
+  1754 163.734  -0.001   0.000   0.000 163.734   237213.8 163721.4 21887.7     0.0 14728.0    126.2  1812.8  1648.2
+  1755 -120.664   0.052   0.000   0.000 -120.612   155739.5 131055.2  5447.0     0.0  2872.5    142.1  2337.4  1628.1
+  1756  22.843   0.013   0.000   0.000  22.856   173755.5 137249.4  2542.0     0.0 11062.2    162.4  3737.7  1675.6
+  1757 -198.647   0.002   0.000   0.000 -198.645   186246.8 203365.2 12494.6     0.0 11455.9    236.8  6714.5  1773.6
+  1758 -17.616   0.014   0.000   0.000 -17.602   247693.4 176037.3 17063.3     0.0 26517.0    478.3  2517.1  1787.1
+  1759   1.352   0.014   0.000   0.000   1.366   229773.7 191593.3 20639.3     0.0 11482.7    145.2  4716.2  1635.5
+  1760  87.536   0.002   0.000   0.000  87.538   231528.8 162494.8 20960.5     0.0 18893.0    141.8  1707.5  1631.2
+  1761  -2.780   0.015   0.000   0.000  -2.765   242764.0 172430.3 23760.3     0.0 18388.8    204.0  1548.1  1649.5
+  1762 -409.090   0.035   0.000   0.000 -409.055   167981.4 202575.3 13603.5     0.0  8734.3    164.9  2254.9  1641.8
+  1763 -14.345   0.010   0.000   0.000 -14.335   233675.7 169788.1 16290.7     0.0 14848.0    249.9  3181.5  1742.2
+  1764 -22.828   0.010   0.000   0.000 -22.817   223678.7 194558.3 20842.4     0.0 16000.9    283.7  4904.0  1763.3
+  1765  27.902   0.007   0.000   0.000  27.910   231759.1 201393.8 27008.1     0.0 18873.9    155.1  4565.1  1633.6
+  1766 229.738   0.003   0.000   0.000 229.741   282772.7 155773.5 25486.1     0.0 21404.8    309.8  5349.2  1796.6
+  1767 278.824  -0.002   0.000   0.000 278.822   253685.6 151112.9 13320.9     0.0 14967.3    192.9  1533.0  1659.7
+  1768 145.083   0.015   0.000   0.000 145.098   268506.2 168602.5 32039.1     0.0 20323.4    120.7  3357.5  1648.5
+  1769 172.533   0.013   0.000   0.000 172.546   267740.9 196212.5 27196.1     0.0 16723.4    256.0  2202.8  1753.1
+  1770  -3.336   0.024   0.000   0.000  -3.312   213765.0 172419.8 14835.3     0.0 13878.9    190.9  1681.3  1663.7
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1771 -182.072   0.010   0.000   0.000 -182.063   223602.8 186806.0 28119.9     0.0 15777.9    320.0  3644.9  1819.1
+  1772 -57.178   0.010   0.000   0.000 -57.168   242365.3 202115.2 28422.0     0.0 13859.7    344.6  3957.1  1763.4
+  1773 202.400   0.010   0.000   0.000 202.410   275308.6 157992.2 28090.0     0.0 23220.1    400.8  4576.7  1790.5
+  1774 134.361   0.003   0.000   0.000 134.364   265000.4 145856.6 31470.0     0.0 19076.5    166.1  3960.4  1654.7
+  1775 238.168   0.013   0.000   0.000 238.181   246875.9 155048.7 20868.4     0.0 14821.6    276.6  1356.4  1707.0
+  1776  14.842   0.013   0.000   0.000  14.856   260225.2 136991.4 27589.4     0.0 17811.8    469.6  1242.8  1941.7
+  1777  -7.222   0.012   0.000   0.000  -7.209   232873.0 130654.6 22032.1     0.0 18315.7    630.6  1433.7  1825.6
+  1778 -233.756   0.015   0.000   0.000 -233.740   200391.8 189551.3 17071.3     0.0 10871.1    247.0  1269.8  1739.5
+  1779 -96.514   0.012   0.000   0.000 -96.502   225892.3 155377.2 20672.7     0.0 19728.4    299.2  1519.5  1737.1
+  1780 -361.753   0.029   0.000   0.000 -361.723   178680.7 192620.3 13993.7     0.0  7801.7    215.4  1938.1  1689.1
+  1781 -183.247   0.008   0.000   0.000 -183.238   212803.4 189631.8 20114.5     0.0 16591.8    363.8  2768.5  1823.3
+  1782 -241.633   0.014   0.000   0.000 -241.619   211361.2 197647.4 14924.8     0.0 12533.2    255.6  2685.8  1752.4
+  1783 -69.539   0.013   0.000   0.000 -69.527   231347.0 221703.3 27463.7     0.0 20952.2    225.1  4692.7  1703.0
+  1784  -8.911   0.012   0.000   0.000  -8.899   264006.1 204296.5 26305.5     0.0 16483.4    286.4  4732.2  1755.8
+  1785 179.031   0.009   0.000   0.000 179.040   270328.0 194999.5 23378.3     0.0 16367.3    196.7  3135.6  1689.3
+  1786 295.511  -0.005   0.000   0.000 295.506   295159.3 197922.9 28669.5     0.0 22222.5    257.3  2212.5  1700.6
+  1787  38.978   0.013   0.000   0.000  38.991   266932.4 186060.4 26225.8     0.0 15685.4    157.9  1617.1  1643.0
+  1788 136.198   0.012   0.000   0.000 136.210   231715.1 181172.3 18123.3     0.0 17542.6    169.3  1386.2  1639.2
+  1789   8.762   0.016   0.000   0.000   8.778   234029.9 185064.2 27924.3     0.0 16467.4    511.1  1797.8  2021.8
+  1790  58.358  -0.004   0.000   0.000  58.354   228093.8 186622.7 25016.1     0.0 18952.7    506.9  1425.6  1833.1
+  1791  57.423   0.017   0.000   0.000  57.440   263379.3 157126.6 28842.7     0.0 18142.9    754.6  3016.3  2086.3
+  1792 129.827   0.013   0.000   0.000 129.841   263778.2 193012.9 26261.1     0.0 12341.5    314.8  1785.9  1765.3
+  1793  -3.616   0.015   0.000   0.000  -3.601   230648.8 197792.6 26977.8     0.0 16269.9     92.0  2728.9  1617.1
+  1794 155.809   0.016   0.000   0.000 155.825   279738.3 179976.4 31737.5     0.0 27109.9    442.1  1519.2  1874.1
+  1795  11.613   0.012   0.000   0.000  11.625   258164.8 195681.5 28452.3     0.0 13396.9    707.2  1699.4  1842.2
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1796 -36.163   0.009   0.000   0.000 -36.154   235681.6 209365.5 38254.2     0.0 20898.7    589.9  2269.3  1782.5
+  1797  22.900   0.003   0.000   0.000  22.904   290745.3 168190.7 30707.4     0.0 21215.2    566.9  1240.8  1970.3
+  1798  -4.521   0.006   0.000   0.000  -4.515   240861.9 179467.2 33806.9     0.0 14369.1    374.3  1245.3  1732.7
+  1799  42.620   0.011   0.000   0.000  42.631   265727.8 178899.3 34324.0     0.0 22356.3    238.1  2853.6  1665.9
+  1800 208.883   0.011   0.000   0.000 208.894   248204.4 154934.2 22745.7     0.0 14638.1    398.0  1074.2  1757.1
+  1801 -197.926   0.018   0.000   0.000 -197.908   188197.4 186738.4 22710.6     0.0 11619.4    251.7  1183.0  1724.5
+  1802 -79.267  -0.002   0.000   0.000 -79.269   217162.4 194884.3 23518.0     0.0 18309.3    525.6  1287.7  1905.7
+  1803 -179.326   0.012   0.000   0.000 -179.313   245378.5 200108.7 28363.2     0.0 14265.3    992.8  2261.1  2112.4
+  1804 129.218   0.012   0.000   0.000 129.230   247327.5 177140.3 15989.6     0.0 17407.8    287.9  1051.6  1722.8
+  1805 102.898   0.015   0.000   0.000 102.912   227504.8 156009.0 21492.2     0.0 13918.5    731.8  1015.3  2096.0
+  1806 -23.600   0.016   0.000   0.000 -23.584   194289.6 165876.1 16356.5     0.0 15243.9    581.3   982.0  1962.2
+  1807 -179.440   0.013   0.000   0.000 -179.428   196552.9 145691.5 18374.5     0.0 13306.3    793.2  1057.7  2070.6
+  1808  55.800   0.010   0.000   0.000  55.810   262512.0 173812.0 21460.2     0.0 21330.3   1217.4  1384.5  2361.1
+  1809 118.492  -0.002   0.000   0.000 118.490   280971.6 164075.7 15902.5     0.0 15493.9    965.1   937.8  2314.5
+  1810 -24.656   0.007   0.000   0.000 -24.649   240824.7 180725.3 25006.5     0.0 14911.3    211.5  1101.1  1665.1
+  1811 108.296   0.011   0.000   0.000 108.307   224717.8 168421.6 15002.3     0.0 15295.0    398.0   970.2  1838.2
+  1812 -131.778   0.018   0.000   0.000 -131.760   205374.5 194149.3 24060.9     0.0  9432.8    366.5  1495.0  1756.6
+  1813 247.638   0.013   0.000   0.000 247.651   210676.8 133399.5  4196.7     0.0 15804.1    360.3  1197.2  1794.9
+  1814 -49.576   0.012   0.000   0.000 -49.564   240099.4 199076.6 26314.8     0.0 15233.0    263.7  2685.9  1740.6
+  1815  70.682   0.013   0.000   0.000  70.696   245535.2 211169.0 30396.3     0.0 19235.1    650.1  1235.0  1976.6
+  1816  13.261   0.001   0.000   0.000  13.261   226946.9 183153.1 19553.9     0.0 12772.3    372.1   965.4  1750.5
+  1817 -200.400   0.015   0.000   0.000 -200.384   223503.3 174021.8 30476.1     0.0 14851.4   1191.0  1856.2  2094.6
+  1818 208.905   0.013   0.000   0.000 208.918   310209.5 150029.6 23922.0     0.0 25213.9   1265.9  1250.1  2057.9
+  1819 204.103   0.014   0.000   0.000 204.116   293393.1 149033.2 19525.4     0.0 12355.3    778.3   868.1  2100.6
+  1820 -55.822   0.007   0.000   0.000 -55.816   255274.0 186868.1 35640.4     0.0 15791.1    343.5  1802.6  1780.6
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1821  68.704  -0.005   0.000   0.000  68.699   226257.4 182786.5 23846.9     0.0 13458.2    221.5   942.5  1653.8
+  1822 -25.507   0.019   0.000   0.000 -25.488   231733.3 159251.4 20551.0     0.0 16468.4    663.2   863.1  1975.9
+  1823 -147.648   0.014   0.000   0.000 -147.633   202078.0 196297.2 24275.7     0.0 16129.8    712.1  1595.0  1779.0
+  1824 -199.730   0.013   0.000   0.000 -199.717   254286.0 179194.9 30548.5     0.0 18952.0   1196.7  1935.7  2490.1
+  1825  46.544   0.011   0.000   0.000  46.556   244708.8 187982.2 26835.5     0.0 18250.7    758.5  1818.3  1832.7
+  1826 210.393   0.010   0.000   0.000 210.403   278717.6 147604.6 22822.3     0.0 14936.8    737.8  1150.8  2075.6
+  1827  94.580   0.013   0.000   0.000  94.593   287493.3 161475.1 26114.2     0.0 15902.9    961.5  1144.5  2354.1
+  1828 101.145   0.015   0.000   0.000 101.160   269311.1 179212.5 31267.8     0.0 20024.1    517.4  1189.1  1893.8
+  1829  -6.350   0.008   0.000   0.000  -6.342   260456.8 177888.9 34391.2     0.0 19456.0    522.6  2041.5  1911.5
+  1830  18.988  -0.008   0.000   0.000  18.980   226945.2 193842.8 28834.0     0.0 15450.1    607.7   887.7  1926.8
+  1831  26.577   0.014   0.000   0.000  26.591   265855.7 191259.9 27915.5     0.0 19693.3   1178.0  1069.7  2494.9
+  1832 159.917   0.014   0.000   0.000 159.930   274146.8 149898.4 23687.3     0.0 16080.0   1400.7   963.3  2239.1
+  1833 -74.302   0.013   0.000   0.000 -74.289   232014.1 194514.0 28326.6     0.0 14785.8    756.2  1306.5  2006.3
+  1834 -130.634   0.011   0.000   0.000 -130.622   246561.5 184567.3 30961.1     0.0 12963.9    873.8  1684.6  2210.0
+  1835 -58.765   0.006   0.000   0.000 -58.758   257693.1 208207.6 31705.0     0.0 14430.0    366.6  1809.8  1812.5
+  1836  54.614  -0.013   0.000   0.000  54.600   238678.1 193803.1 28569.1     0.0 18869.9    164.4   923.3  1627.1
+  1837  48.964   0.016   0.000   0.000  48.980   256350.3 213533.8 38287.4     0.0 18456.2    639.3   985.4  2050.1
+  1838 -55.873   0.015   0.000   0.000 -55.858   260314.3 185841.2 26262.0     0.0 18871.0    628.8   943.5  1828.4
+  1839 -143.295   0.014   0.000   0.000 -143.281   241111.3 206107.4 33121.2     0.0  9566.7    792.2  1516.2  2114.5
+  1840 215.963   0.011   0.000   0.000 215.974   255592.6 166460.6 16282.7     0.0 21464.1    391.1   766.0  1763.0
+  1841  69.627   0.006   0.000   0.000  69.633   255628.1 186141.2 31465.5     0.0 18167.2    975.2   943.7  2265.0
+  1842 109.371   0.013   0.000   0.000 109.384   236893.4 159819.5 15159.1     0.0 15035.5   1264.7   716.4  2114.6
+  1843 -314.473   0.024   0.000   0.000 -314.449   197183.4 216799.8 27546.5     0.0 10268.6    397.4  1835.7  1828.8
+  1844 -92.684   0.008   0.000   0.000 -92.676   219041.2 198178.2 21729.4     0.0 16776.0    355.5  1609.1  1815.3
+  1845 160.553   0.007   0.000   0.000 160.560   243855.4 154920.6 11360.9     0.0 16776.1    741.0   730.9  2002.2
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1846 -168.696   0.014   0.000   0.000 -168.682   212379.9 188691.3 16235.6     0.0 13629.7    246.9   853.6  1751.0
+  1847 -159.586   0.010   0.000   0.000 -159.576   235559.3 206038.4 30137.5     0.0 19610.8    487.2  1971.6  1926.6
+  1848  24.410   0.006   0.000   0.000  24.416   244554.8 190631.2 23459.8     0.0 20394.2    827.8  1510.9  1905.1
+  1849  97.969   0.009   0.000   0.000  97.978   262018.7 193034.2 22789.8     0.0 12336.3    651.9  1200.5  2029.0
+  1850  27.942   0.006   0.000   0.000  27.947   252413.7 157614.2 27793.1     0.0 19877.6    309.3   966.7  1753.2
+  1851 152.331   0.011   0.000   0.000 152.342   309545.7 155953.0 22598.8     0.0 19316.2    397.4  1621.8  1814.6
+  1852 198.014  -0.002   0.000   0.000 198.012   288593.4 192712.4 31308.3     0.0 18778.1    474.1   958.5  1839.7
+  1853  81.742   0.016   0.000   0.000  81.758   229910.1 171873.8 16326.9     0.0 13737.1    303.7   774.3  1707.6
+  1854   4.519   0.016   0.000   0.000   4.535   230371.3 189979.1 26518.7     0.0 15992.7    617.6  1041.8  1983.3
+  1855  87.839   0.012   0.000   0.000  87.852   268121.8 162985.7 15973.4     0.0 18631.1   1431.0   711.0  2408.6
+  1856  22.974   0.010   0.000   0.000  22.984   267405.0 139911.7 21446.1     0.0 14072.0    465.9  1473.8  1891.3
+  1857 -253.635   0.009   0.000   0.000 -253.626   195454.8 196106.4 16753.2     0.0 13105.2    170.7   913.8  1669.3
+  1858 -71.014   0.001   0.000   0.000 -71.013   210613.2 192512.4 19841.1     0.0 15432.0    360.2   801.2  1802.8
+  1859 -141.891   0.017   0.000   0.000 -141.875   200694.3 191361.2 21807.0     0.0 16040.3    426.7  1411.3  1794.1
+  1860  56.914   0.011   0.000   0.000  56.925   287869.1 135744.5 20701.4     0.0 22419.7    957.0  1029.2  2348.1
+  1861 -22.767   0.010   0.000   0.000 -22.757   248657.8 130638.2 26205.8     0.0 15270.9    484.4   948.6  1877.3
+  1862  10.378   0.005   0.000   0.000  10.383   250013.2 155847.8 21622.8     0.0 17353.6    337.8  1112.9  1735.7
+  1863  66.785  -0.009   0.000   0.000  66.776   236037.2 179244.0 27132.4     0.0 15932.5    297.3   987.1  1738.4
+  1864 -20.340   0.012   0.000   0.000 -20.328   283466.7 171204.6 28881.6     0.0 22931.0    651.4   948.8  2121.4
+  1865  52.402   0.001   0.000   0.000  52.403   222107.4 183232.8 23011.8     0.0  9395.7    292.5   817.8  1680.9
+  1866 -76.695   0.016   0.000   0.000 -76.680   246413.0 158526.5 30196.7     0.0 20893.1    488.2   969.1  1899.8
+  1867 -96.018   0.012   0.000   0.000 -96.006   207294.0 150640.0 22174.8     0.0 14729.9    701.4  1098.7  1807.2
+  1868 157.093   0.011   0.000   0.000 157.104   234947.3 153019.3 14177.1     0.0 17839.7   1449.9   849.7  2106.4
+  1869  67.559   0.016   0.000   0.000  67.576   240444.5 140636.5 21686.3     0.0 12381.9    805.9  1053.6  2129.2
+  1870 -167.564   0.016   0.000   0.000 -167.548   208639.7 195321.6 23537.6     0.0 14930.1    573.7  1789.2  1929.3
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1871 -177.078   0.011   0.000   0.000 -177.067   258489.5 176796.5 30830.8     0.0 20487.3   1127.9  1744.1  2520.0
+  1872 -32.115   0.010   0.000   0.000 -32.105   233433.1 193088.3 26163.6     0.0 17336.3    607.2  1848.1  1801.6
+  1873  63.102   0.016   0.000   0.000  63.118   269260.3 153083.3 31673.5     0.0 23290.4    973.7  1760.2  2349.7
+  1874 155.225   0.013   0.000   0.000 155.238   277031.8 150214.5 32316.3     0.0 19246.1   1144.0  1446.7  2151.2
+  1875 215.316  -0.001   0.000   0.000 215.315   284049.3 182454.5 32096.5     0.0 13888.7    810.6   834.5  2003.2
+  1876 239.608   0.009   0.000   0.000 239.616   224303.8 137163.4  6482.7     0.0  9387.4    308.8   753.4  1730.5
+  1877   7.238   0.009   0.000   0.000   7.246   279985.0 161568.8 29796.5     0.0 25286.4    462.2   756.8  1934.7
+  1878  90.530   0.011   0.000   0.000  90.540   286253.4 147805.8 24304.5     0.0 15627.2    825.2  1449.2  2002.5
+  1879 147.177   0.009   0.000   0.000 147.186   255763.1 215943.9 38058.3     0.0 15602.4    585.0   798.8  1900.4
+  1880 -230.111   0.029   0.000   0.000 -230.082   178249.1 183372.7 12131.7     0.0  9784.7    286.8   745.9  1775.8
+  1881 -138.162   0.009   0.000   0.000 -138.153   175666.9 183525.3 12108.0     0.0 13127.6    244.4   896.6  1715.3
+  1882  14.678   0.013   0.000   0.000  14.691   238889.9 184673.9 16680.9     0.0 19217.4    803.0  1434.4  2321.4
+  1883  43.857   0.010   0.000   0.000  43.867   254417.8 150695.0 21687.7     0.0 17359.0    807.5  1659.0  2286.4
+  1884 101.530   0.003   0.000   0.000 101.533   251458.3 195976.3 20231.1     0.0 16036.9    381.3  1101.4  1885.8
+  1885 196.335   0.006   0.000   0.000 196.340   239016.2 154260.5 16939.6     0.0 15799.8    221.1   758.6  1694.7
+  1886 -16.697  -0.002   0.000   0.000 -16.699   200491.4 183426.5 25518.9     0.0 14894.6    346.9   701.5  1806.7
+  1887 -545.021   0.036   0.000   0.000 -544.986   156088.7 210980.6 12207.4     0.0 10978.0    246.0   959.2  1772.4
+  1888 -318.132   0.003   0.000   0.000 -318.129   218664.5 202496.1 19470.7     0.0 16784.3    534.0  2038.3  2084.8
+  1889 145.325   0.012   0.000   0.000 145.337   270293.9 180060.9 18982.7     0.0 19428.0    333.4  1866.8  1775.4
+  1890   5.125   0.004   0.000   0.000   5.129   234555.9 155430.5 16728.1     0.0 18017.3    222.6  1551.7  1685.3
+  1891 176.499   0.004   0.000   0.000 176.504   262241.3 152153.1 24585.8     0.0 20611.3    460.6  1982.0  1938.0
+  1892 151.003   0.009   0.000   0.000 151.011   262857.3 146205.8 29176.9     0.0 20223.0    191.1  2069.5  1699.2
+  1893  74.831   0.013   0.000   0.000  74.844   253255.5 157304.0 28160.2     0.0 17373.4    337.0   824.7  1783.9
+  1894 224.344   0.002   0.000   0.000 224.345   300063.7 209055.9 29513.8     0.0 19899.4    358.4   914.8  1783.0
+  1895  69.123   0.008   0.000   0.000  69.131   287792.5 167473.4 31160.8     0.0 21063.5    307.6   894.4  1804.6
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Spinup NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1896  46.510  -0.002   0.000   0.000  46.508   269941.5 167992.4 32443.6     0.0 19364.4    304.7   909.9  1772.2
+  1897  90.702   0.002   0.000   0.000  90.704   265290.7 163072.9 29067.9     0.0 13797.7    372.5  1063.8  1788.5
+  1898 144.842   0.005   0.000   0.000 144.847   219336.7 135255.1 22844.0     0.0 15297.7    270.7   872.0  1705.4
+  1899 -89.244   0.014   0.000   0.000 -89.230   235969.4 138904.6 27600.8     0.0 14422.2    434.9   992.4  1883.6
+  1900  32.675   0.000   0.000   0.000  32.676   211656.2 162909.0 18723.5     0.0 15148.3    493.1   837.1  1792.1
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1901 -157.252   0.018   0.000   0.000 -157.234   189625.9 192877.2 25145.3     0.0 14080.7    325.7  1369.1  1727.1
+  1902  71.374   0.016   0.000   0.000  71.390   264773.9 178340.9 24072.7     0.0 24273.5    737.3  1130.2  1969.0
+  1903 -67.324   0.013   0.000   0.000 -67.311   248660.2 201073.4 32599.5     0.0 10393.1    555.0  1782.9  1928.7
+  1904 180.143   0.011   0.000   0.000 180.154   259499.7 210863.5 33591.3     0.0 17547.2    332.7   954.6  1399.6
+  1905 -496.543   0.010   0.000   0.000 -496.534   273154.6 176554.7 23032.8     0.0 19936.4    318.7  3073.6  1577.2
+  1906 -191.523   0.001   0.000   0.000 -191.522   315008.7 182062.3 31502.9     0.0 26503.4    167.5  1410.8  1395.9
+  1907 177.527   0.006   0.000   0.000 177.534   268753.7 189892.1 31158.0     0.0 15875.8    248.8  1428.9  1471.8
+  1908 233.421   0.009   0.000   0.000 233.429   269752.5 153076.8 26228.5     0.0 18552.5    219.2  1309.3  1380.2
+  1909 162.077   0.014   0.000   0.000 162.091   225031.3 164795.2 23438.5     0.0 15018.7    504.5  1001.0  1337.6
+  1910 -131.726   0.017   0.000   0.000 -131.709   211707.7 149851.7 33259.0     0.0 15276.6    669.1  1611.9  1584.9
+  1911  16.101   0.008   0.000   0.000  16.110   226650.0 163324.0 24509.1     0.0 18406.2    951.7  1487.6  1721.8
+  1912  16.514   0.013   0.000   0.000  16.527   244323.0 150207.2 27338.5     0.0 17006.1    725.8  1208.3  1628.7
+  1913 256.978   0.011   0.000   0.000 256.989   229484.4 139058.9  5600.0     0.0 11145.1    431.5  1029.8  1306.3
+  1914  68.677   0.010   0.000   0.000  68.688   241351.4 136693.4 21249.4     0.0 21311.5    317.2  1105.0  1234.8
+  1915 150.552   0.006   0.000   0.000 150.558   293389.3 125973.2 23393.2     0.0 17525.8    598.4  1593.3  1618.9
+  1916  97.544   0.006   0.000   0.000  97.549   255211.5 196901.5 27953.4     0.0 13943.6    449.2  1110.0  1525.1
+  1917 240.770   0.010   0.000   0.000 240.780   250315.0 165110.4 17306.8     0.0 19149.1    323.6   830.5  1349.6
+  1918 -191.094   0.018   0.000   0.000 -191.076   188663.2 189965.1 23029.0     0.0 12433.8    405.6   897.6  1391.1
+  1919 -186.857   0.013   0.000   0.000 -186.844   233409.2 190859.2 24300.2     0.0 19268.2    885.5   928.7  1734.9
+  1920  38.598   0.013   0.000   0.000  38.612   219659.9 177232.6 15892.4     0.0 16451.1   1122.0   784.7  1792.4
+  1921 -19.685   0.014   0.000   0.000 -19.671   200924.1 154840.6 13710.4     0.0  9627.2    914.8   738.3  1789.7
+  1922  -7.532  -0.000   0.000   0.000  -7.532   205493.9 178644.8 17237.1     0.0 13941.2    518.4   750.1  1650.1
+  1923 -44.446   0.014   0.000   0.000 -44.432   225855.6 154032.8 16119.6     0.0 16287.1    943.8   690.6  2094.3
+  1924   2.903  -0.006   0.000   0.000   2.897   201237.9 186961.4 22358.1     0.0 17412.6    761.2   758.1  1568.3
+  1925 -224.422   0.015   0.000   0.000 -224.407   223499.1 204803.5 27559.4     0.0 11748.8    982.8  1459.1  2060.0
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1926 200.730   0.013   0.000   0.000 200.743   293524.9 153324.4 23602.5     0.0 22474.2    562.8   898.3  1691.4
+  1927 149.963   0.013   0.000   0.000 149.976   263144.7 144232.3 32910.1     0.0 20038.4    302.2  1687.3  1564.3
+  1928 202.647   0.004   0.000   0.000 202.652   272980.7 201913.7 30783.8     0.0 16952.9    770.4   779.3  1770.2
+  1929 -37.509   0.011   0.000   0.000 -37.498   267259.3 191914.7 35082.3     0.0 15954.0    647.3  1132.6  1835.0
+  1930   3.721   0.009   0.000   0.000   3.731   231958.6 213539.1 40429.6     0.0 19367.2    254.2  1237.4  1331.1
+  1931 -22.679  -0.002   0.000   0.000 -22.680   218508.9 225163.4 35247.6     0.0 10866.8    256.4   981.3  1465.3
+  1932 -99.963   0.002   0.000   0.000 -99.960   238413.6 194082.1 40020.9     0.0 19741.2    633.2  1007.6  1625.7
+  1933 -35.243   0.007   0.000   0.000 -35.236   207494.0 128300.8 18943.7     0.0 14374.8    643.2   684.4  1620.7
+  1934 -315.074   0.032   0.000   0.000 -315.042   186817.1 143695.0 10411.8     0.0  9918.8    194.7   796.4  1261.6
+  1935  26.123  -0.008   0.000   0.000  26.114   214523.7 221824.2 14309.9     0.0 18757.5    607.5  1067.4  1593.4
+  1936 178.207   0.013   0.000   0.000 178.220   285160.4 195715.0 19894.5     0.0 17924.9    542.7   943.1  1732.2
+  1937  59.823   0.009   0.000   0.000  59.832   279918.2 214932.1 24888.1     0.0 16937.3    343.2   995.9  1218.8
+  1938 -49.505  -0.000   0.000   0.000 -49.505   273065.2 186285.8 25051.2     0.0 17793.3    378.1   906.1  1269.1
+  1939 136.478   0.009   0.000   0.000 136.487   258915.1 205974.1 27050.7     0.0 19985.6    220.9   860.8   941.9
+  1940 252.924   0.009   0.000   0.000 252.933   310163.6 192635.0 21496.6     0.0 19733.8    423.4   720.1  1173.2
+  1941 279.282   0.009   0.000   0.000 279.291   270371.1 198145.3 30524.2     0.0 19192.9    339.8   684.7  1070.1
+  1942 -204.715   0.010   0.000   0.000 -204.704   245391.6 199649.9 39931.3     0.0 17924.5    363.5   963.7   923.7
+  1943 -233.587   0.006   0.000   0.000 -233.581   230711.5 231891.8 37067.1     0.0 12345.9    433.7  1542.8  1105.5
+  1944 -46.557   0.004   0.000   0.000 -46.554   285422.8 250576.6 46926.3     0.0 24378.0    287.1  1525.0  1013.1
+  1945 156.940  -0.014   0.000   0.000 156.926   284204.6 227710.1 45354.4     0.0 18855.0    468.2  1386.6  1061.0
+  1946 213.798   0.011   0.000   0.000 213.809   302418.4 201521.8 33231.2     0.0 21286.9    490.9  1189.4   956.8
+  1947 239.147   0.007   0.000   0.000 239.154   278430.2 199944.7 31288.6     0.0 15794.9    599.0   850.0  1095.8
+  1948 137.224   0.011   0.000   0.000 137.235   250785.8 239271.9 34315.7     0.0 16833.6    368.9   939.2  1079.0
+  1949  44.597   0.003   0.000   0.000  44.599   223805.2 209618.5 23178.4     0.0 10496.7    472.9   749.0  1104.4
+  1950 -92.203   0.020   0.000   0.000 -92.183   207554.9 171094.1 20601.7     0.0 16383.1    319.0   753.1  1139.1
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1951  36.914   0.007   0.000   0.000  36.922   230390.2 188114.2 18850.4     0.0 18663.1    730.2   856.3  1312.5
+  1952  -6.008  -0.008   0.000   0.000  -6.015   201994.2 207305.2 20834.0     0.0  6798.3    248.6   744.7   860.6
+  1953  72.261  -0.010   0.000   0.000  72.251   260372.8 156501.8 21453.7     0.0 27745.0    911.7   684.9  1472.2
+  1954 146.514   0.018   0.000   0.000 146.533   220633.4 151478.0 18352.3     0.0 10419.9   1334.3   646.5  1002.3
+  1955 -137.235   0.014   0.000   0.000 -137.220   233004.8 206819.6 36176.2     0.0 18442.2   1071.5   682.9  1253.7
+  1956 -120.586   0.015   0.000   0.000 -120.572   231290.3 212616.0 33157.8     0.0 18391.7    862.3   943.4  1036.1
+  1957  76.033   0.015   0.000   0.000  76.048   286093.7 172166.6 22761.6     0.0 23330.5   1214.7   616.5  1293.1
+  1958 -132.451   0.017   0.000   0.000 -132.435   302212.9 171792.9 29865.4     0.0 24505.9   1541.0   657.4   918.6
+  1959   7.657  -0.007   0.000   0.000   7.650   224324.1 199432.9 31459.6     0.0 11203.8    534.1   724.6   437.3
+  1960  59.268   0.005   0.000   0.000  59.273   248197.8 219517.1 47768.7     0.0 20399.3    912.9   958.0   767.3
+  1961 -85.636   0.013   0.000   0.000 -85.623   254497.1 235131.2 44661.5     0.0 20813.3   1073.3  1143.5   865.8
+  1962 -117.253   0.014   0.000   0.000 -117.239   268425.6 217210.8 44179.2     0.0 16813.1    531.5   996.1   462.3
+  1963 117.619   0.006   0.000   0.000 117.625   292725.4 237139.0 37076.2     0.0 26668.4    706.0   744.4   452.2
+  1964 206.387  -0.006   0.000   0.000 206.381   253463.2 203723.2 35851.9     0.0 10864.8    489.1   690.7   385.9
+  1965 -108.223   0.015   0.000   0.000 -108.208   218586.8 222520.6 46696.9     0.0 12812.4    684.8   974.0   511.6
+  1966 251.981   0.012   0.000   0.000 251.993   238445.9 161612.5 11274.2     0.0 20407.4   1147.9   617.9   783.6
+  1967 -52.078   0.003   0.000   0.000 -52.076   202817.7 202395.0 33894.9     0.0 12338.8    937.4   572.6   583.0
+  1968 235.708   0.010   0.000   0.000 235.718   279542.8 178719.9 18253.7     0.0 22299.5   1580.4   542.1  1276.8
+  1969   0.565   0.007   0.000   0.000   0.571   238700.4 149868.6 26520.8     0.0 14488.8   1051.6   549.8   783.5
+  1970  54.223   0.009   0.000   0.000  54.232   224107.4 189116.6 27773.2     0.0 14620.1    853.0   535.5   779.2
+  1971 -39.096   0.011   0.000   0.000 -39.085   245149.3 194640.5 26070.5     0.0 20659.7    680.2   527.8   675.5
+  1972 216.738   0.013   0.000   0.000 216.751   249743.7 167286.0 19315.9     0.0 18581.9    892.4   519.4   861.6
+  1973 -119.830   0.009   0.000   0.000 -119.821   259081.1 200067.7 31604.2     0.0 20283.6   1120.2   641.9   931.8
+  1974 -146.450   0.007   0.000   0.000 -146.443   241518.8 205410.5 32175.3     0.0 18471.9    680.7   864.8   573.6
+  1975 218.469   0.003   0.000   0.000 218.472   289705.2 199551.8 28520.5     0.0 24970.9   1047.0   604.9   918.4
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1976  34.979   0.001   0.000   0.000  34.980   234969.3 189812.0 25545.7     0.0  6451.4    739.5   669.4   504.3
+  1977 114.438   0.012   0.000   0.000 114.450   284187.2 189145.7 24747.5     0.0 25689.3    591.4   787.8   491.4
+  1978  46.994   0.002   0.000   0.000  46.996   221584.2 199214.1 24990.6     0.0 16103.5    307.0   617.4   268.2
+  1979 -272.720   0.000   0.000   0.000 -272.719   295125.3 248887.9 57781.2     0.0 18103.9    822.3   853.1   774.0
+  1980 165.523   0.005   0.000   0.000 165.528   283170.6 224041.9 34216.7     0.0 19029.1    225.7   884.1   263.6
+  1981 -189.545  -0.004   0.000   0.000 -189.549   264866.6 232023.7 56311.9     0.0 20754.4    340.9   983.0   330.9
+  1982  71.577   0.006   0.000   0.000  71.583   269502.6 230859.6 38692.1     0.0 17376.8    456.8   767.7   383.2
+  1983 354.765  -0.005   0.000   0.000 354.760   248186.0 189097.0 19242.7     0.0 19221.4    429.2   672.9   411.9
+  1984 -159.839  -0.013   0.000   0.000 -159.852   239393.6 225141.4 49084.7     0.0 18397.5    969.8   710.3   933.9
+  1985  88.038  -0.011   0.000   0.000  88.027   234040.0 210690.2 27166.3     0.0 18017.6    965.0   599.7   870.3
+  1986  81.699   0.006   0.000   0.000  81.705   246713.9 215204.7 29202.4     0.0 18535.0   1271.3   580.4  1150.5
+  1987 -87.980  -0.001   0.000   0.000 -87.981   287502.0 208954.7 43855.3     0.0 20131.6   2510.6   609.4  1431.5
+  1988 120.901  -0.001   0.000   0.000 120.900   301567.5 219187.2 37557.4     0.0 22385.8   1231.7   605.0  1121.3
+  1989 167.930   0.009   0.000   0.000 167.939   307379.6 208115.2 35267.6     0.0 18503.8   1055.0   539.7   936.9
+  1990  71.186  -0.002   0.000   0.000  71.184   239172.1 176341.5 23991.5     0.0 13422.7    281.5   539.0   381.9
+  1991 -95.949  -0.003   0.000   0.000 -95.953   231303.0 222872.6 33669.2     0.0 18476.2    521.7   620.2   634.4
+  1992 227.491   0.002   0.000   0.000 227.493   256734.1 207901.2 26408.3     0.0 19533.8    756.3   572.2   969.6
+  1993  58.719   0.005   0.000   0.000  58.723   271729.6 196756.3 29166.2     0.0 14933.6   1155.7   539.9  1499.5
+  1994 -17.084   0.008   0.000   0.000 -17.076   304355.5 227930.2 36569.2     0.0 24132.8    615.6   753.4  1112.5
+  1995 -97.597  -0.002   0.000   0.000 -97.598   291197.3 204302.2 44952.9     0.0 19519.4    745.9   904.6  1281.6
+  1996  61.140  -0.007   0.000   0.000  61.133   249347.8 210107.8 37074.0     0.0 17889.6    324.4   815.0  1007.7
+  1997  75.714   0.005   0.000   0.000  75.719   292920.9 206329.9 37804.4     0.0 19076.5    555.0   839.9  1228.6
+  1998 141.625   0.001   0.000   0.000 141.626   332615.2 202913.4 53122.4     0.0 27227.1    485.8   891.6  1237.9
+  1999  33.659  -0.005   0.000   0.000  33.654   246801.5 195164.7 37576.8     0.0 20436.9    234.0   786.9  1487.0
+  2000  71.166  -0.002   0.000   0.000  71.163   240785.6 200267.1 47078.7     0.0 21023.5    393.7   911.6  1715.7
+
+                 Carbon flux (ktC/yr)                    Water (dam3/yr)                Nitrogen (MgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  2001 -27.276   0.004   0.000   0.000 -27.271   246408.8 217304.1 46254.5     0.0 29121.0    947.6   763.3  1982.4
+  2002 -70.987   0.002   0.000   0.000 -70.985   277051.9 205164.8 87159.6     0.0 19279.1   1910.3   982.3  2312.3
+  2003  46.357  -0.001   0.000   0.000  46.357   269837.7 209075.5 41192.3     0.0 19208.6    778.6   727.8  1904.4
+  2004 526.869   0.003   0.000   0.000 526.871   295067.0 168579.8 17562.0     0.0 30030.6   1089.8   632.6  2290.4
+  2005 102.464  -0.000   0.000   0.000 102.464   214356.5 178456.8 30834.5     0.0 10907.2    958.6   625.0  2287.6
+  2006 -222.207  -0.001   0.000   0.000 -222.208   218442.1 177798.7 33146.7     0.0 22612.0    760.8   665.8  2178.1
+  2007  12.728  -0.007   0.000   0.000  12.721   259096.5 177664.1 32985.5     0.0 25079.3   1881.0   604.9  3094.5
+  2008 -64.553  -0.015   0.000   0.000 -64.568   221643.0 189956.4 27628.8     0.0 19398.3   1179.0   617.6  2561.6
+  2009 -68.289  -0.000   0.000   0.000 -68.290   235822.8 176107.2 27012.0     0.0 21942.9   1856.2   566.3  3038.6
+  2010 -54.234   0.004   0.000   0.000 -54.231   235263.7 198511.4 31419.8     0.0 25063.9   1734.3   564.9  2987.6
+  2011 -104.770   0.001   0.000   0.000 -104.770   241979.6 203062.6 36517.1     0.0 23291.5   1913.6   560.5  3057.7
+  2012   5.227  -0.003   0.000   0.000   5.223   255185.4 195749.5 38240.9     0.0 26715.4   1736.8   559.8  3002.1
+  2013 -97.621   0.001   0.000   0.000 -97.620   265005.2 188827.0 32924.1     0.0 16952.1   1532.2   574.9  2813.7
+  2014  10.601  -0.006   0.000   0.000  10.595   230233.3 193330.0 38636.1     0.0 26611.3    655.9   592.9  1966.5
+  2015  72.815   0.005   0.000   0.000  72.820   284270.2 204817.2 32227.0     0.0 25307.3   1410.1   573.1  2963.7
+  2016  76.789   0.004   0.000   0.000  76.794   315942.4 187658.5 42212.0     0.0 32640.9   1187.0   645.6  2583.7
+  2017 -35.423   0.001   0.000   0.000 -35.423   266478.2 208430.4 41599.7     0.0 21305.0   1151.8   705.9  2605.4
+  2018 113.254  -0.004   0.000   0.000 113.250   258895.8 203354.5 47127.3     0.0 28694.8    490.6   701.3  1877.7
+  2019  42.700  -0.000   0.000   0.000  42.700   304170.3 206582.4 47565.9     0.0 27065.1   1739.8   699.8  3336.4
+Simulation ended.
+lpjml successfully terminated, 72 grid cells processed.
+Wall clock time:	321 sec, 0.015 sec/cell/year.
+Total wall clock time:	329 sec (00:05:29).

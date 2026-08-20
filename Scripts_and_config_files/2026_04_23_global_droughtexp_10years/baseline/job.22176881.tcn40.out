@@ -1,0 +1,210 @@
+******************************************************************************
+****        _     ____     _           _       ____        _  ___         ****
+****       | |   |  _ \   | |_ __ ___ | |     | ___|      / |/ _ \        ****
+****       | |   | |_) |  | | '_ ` _ \| |     |___ \      | | | | |       ****
+****       | |___|  __/ |_| | | | | | | |___   ___) |  _  | | |_| |       ****
+****       |_____|_|   \___/|_| |_| |_|_____| |____/  (_) |_|\___/        ****
+****                                                                      ****
+****                 lpjml C Version 5.10.1 (Apr 23 2026)                 ****
+****    Dynamic global vegetation model with natural and managed land     ****
+****                     Compiled for Linux with MPI                      ****
+****       (C) Potsdam Institute for Climate Impact Research (PIK),       ****
+****                          see COPYRIGHT file                          ****
+****              Authors, and contributors see AUTHORS file              ****
+**** This version of LPJmL is licensed under GNU AGPL Version 3 or later  ****
+****        See LICENSE file or go to http://www.gnu.org/licenses/        ****
+****                 or invoke lpjml -l to print license                  ****
+****      https://gitlab.pik-potsdam.de/lpjml/wur_team/lpjml-wur.git      ****
+****          GIT hash: 5e6f8e1bb5c5d5f3357da68b6c43e9517864f3c2          ****
+****                                                                      ****
+******************************************************************************
+
+Running for user druijsch on tcn40.local.snellius.surf.nl at Thu Apr 23 15:15:00 2026
+Reading configuration from '/home/druijsch/LPJmL5/dev15oct2025/config_files/2026_04_23_global_droughtexp_10years/baseline/2026_04_23_global_droughtexp_10years_baseline_config.cjson'.
+==============================================================================
+/----------------------------------------------------------\
+|institution: Potsdam Institute for Climate Impact Research|
+|contact:                                                  |
+|comment:                                                  |
+\----------------------------------------------------------/
+Simulation "LPJmL Run" running on 256 tasks
+Simulation with nitrogen limitation, permafrost, Johansen conductivity, 
+percolation heattransfer, GSI phenology, NPP controlled BNF, land use, 
+potential irrigation, others to crop "maize" and "temperate cereals", 
+land-use change timber, fixed residue remove, with auto fertilizer, 
+pft.cjson LAImax, livestock grazing, bondau2007 crop PHU option, 
+separate harvests.
+Cultivation types: none, biomass, annual crop
+Working directory: /gpfs/home5/druijsch/LPJmL5/dev15oct2025
+cpp processed configuration file written to `/projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/`.
+Starting from restart file '/home/druijsch/LPJmL5/dev15oct2025/restart/2026_01_29_baseline_run/restart_1960_crop_stdfire.lpj'.
+Input files:
+Variable     Fmt  Varname  Filename
+------------ ---- -------- ---------------------------------------------------
+soil         cdf  soilcode /projects/prjs2023/chapter3/lpjml_input/regridded_global_usda_soilmap.nc
+temp         cdf  tas      /projects/prjs2023/chapter3/lpjml_input/gswp3-w5e5_obsclim_tas_global_daily_1901_2019_version_2021-09-XX_degreesC.nc
+prec         cdf  pr       /projects/prjs2023/chapter3/lpjml_input/droughtexp_10years/pr_1960_2010_zeroed_1970_1979_global_slurm.nc
+lwdown       cdf  rlds     /projects/prjs2023/chapter3/lpjml_input/gswp3-w5e5_obsclim_rlds_global_daily_1901_2019_version_2021-09-XX.nc
+swdown       cdf  rsds     /projects/prjs2023/chapter3/lpjml_input/gswp3-w5e5_obsclim_rsds_global_daily_1901_2019_version_2021-09-XX.nc
+no3_depo     cdf  noy      /projects/prjs2023/chapter3/lpjml_input/ndep-noy_histsoc_monthly_1901_2021_units.nc
+nh4_depo     cdf  nhx      /projects/prjs2023/chapter3/lpjml_input/ndep-nhx_histsoc_monthly_1901_2021_units.nc
+soilpH       cdf  soil_ph  /projects/prjs2023/chapter3/lpjml_input/hwsd_soil_data_all_land_oceanfilled.nc
+co2          txt           /projects/prjs2023/chapter3/lpjml_input/co2_1832-2023.dat
+windspeed    cdf  sfcwind  /projects/prjs2023/chapter3/lpjml_input/gswp3-w5e5_obsclim_sfcwind_global_daily_1901_2019_version_2021-09-XX.nc
+countries    cdf  country  /projects/prjs2023/chapter3/lpjml_input/regridded_cow_full_2018_5min_reduced_filled.nc
+landuse      cdf  CFTfrac  /projects/prjs2023/chapter3/lpjml_input/MAPSPAM_2020_crops_filled_ESA_01deg_v7.nc
+------------ ---- -------- ---------------------------------------------------
+Reading random seeds from restart file.
+Number of output files:       65
+Output written in year:       1960
+Byte order in output files:   little endian
+
+Compression level for NetCDF: 3
+Missing value in NetCDF:      -1e+32
+Base year in NetCDF:          1960
+NetCDF grid:                  local
+Variable            Fmt  Unit        Type   tstep nbd Filename
+------------------- ---- ----------- ------ ----- --- -------------------------
+albedo              cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/malbedo.nc + .json
+cftfrac             cdf  -           float  year   32 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/cftfrac.nc + .json
+discharge           cdf  hm3/day     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mdischarge.nc + .json
+evap                cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mevap.nc + .json
+fapar               cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mfapar.nc + .json
+firec               cdf  gC/m2/yr    float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/firec.nc + .json
+firef               cdf  1           float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/firef.nc + .json
+flux_estabc         cdf  gC/m2/yr    float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/flux_estab.nc + .json
+fpc                 cdf  -           float  month  12 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/fpc.nc + .json
+globalflux          txt  -           float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/globalflux.csv + .json
+gpp                 cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mgpp.nc + .json
+litc                cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/litc.nc + .json
+litn                cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/litn.nc + .json
+npp                 cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mnpp.nc + .json
+nuptake             cdf  gN/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mnuptake.nc + .json
+pet                 cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mpet.nc + .json
+pft_chawo           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_chawo.nc + .json
+pft_cleaf           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_cleaf.nc + .json
+pft_croot           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_croot.nc + .json
+pft_csapw           cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_csapw.nc + .json
+pft_fpar            cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_fpar.nc + .json
+pft_gpp             cdf  gC/m2/month float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_gpp.nc + .json
+pft_laimax          cdf  m2/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_laimax.nc + .json
+pft_mort            cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_mort.nc + .json
+pft_mort_background cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_mort_background.nc + .json
+pft_mort_drought    cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_mort_drought.nc + .json
+pft_mort_heat       cdf  1/month     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_mort_heat.nc + .json
+pft_nind            cdf  ind/m²     float  month  11 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_nind.nc + .json
+pft_nleaf           cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_nleaf.nc + .json
+pft_npp             cdf  gC/m2/yr    float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_npp.nc + .json
+pft_nroot           cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_nroot.nc + .json
+pft_nuptake         cdf  gN/m2/yr    float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_nuptake.nc + .json
+pft_phen            cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_phen.nc + .json
+pft_survive_frac    cdf  -           float  month  43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_survive_frac.nc + .json
+pft_vegc            cdf  gC/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_vegc.nc + .json
+pft_vegn            cdf  gN/m2       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_vegn.nc + .json
+pft_water_demand    cdf  mm/yr       float  year   43 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/pft_water_demand.nc + .json
+phen_light          cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mphen_light.nc + .json
+phen_tmax           cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mphen_tmax.nc + .json
+phen_tmin           cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mphen_tmin.nc + .json
+phen_water          cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mphen_water.nc + .json
+rd                  cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/rd.nc + .json
+rh                  cdf  gC/m2/month float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mrh.nc + .json
+runoff              cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mrunoff.nc + .json
+soilc               cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilc.nc + .json
+soilc_layer         cdf  gC/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilc_layer.nc + .json
+soiln               cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soiln.nc + .json
+soiln_layer         cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soiln_layer.nc + .json
+soilnh4             cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilnh4.nc + .json
+soilnh4_layer       cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilnh4_layer.nc + .json
+soilno3             cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilno3.nc + .json
+soilno3_layer       cdf  gN/m2       float  year    5 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/soilno3_layer.nc + .json
+soiltemp1           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/msoiltemp1.nc + .json
+soiltemp2           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/msoiltemp2.nc + .json
+soiltemp3           cdf  Celsius     float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/msoiltemp3.nc + .json
+swc1                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mswc1.nc + .json
+swc2                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mswc2.nc + .json
+swc3                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mswc3.nc + .json
+swc4                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mswc4.nc + .json
+swc5                cdf  1           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mswc5.nc + .json
+transp              cdf  mm/month    float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mtransp.nc + .json
+vegc                cdf  gC/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/vegc.nc + .json
+vegn                cdf  gN/m2       float  year    1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/vegn.nc + .json
+wateramount         cdf  hm3         float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/mwateramount.nc + .json
+wscal               cdf  -           float  month   1 /projects/prjs2023/chapter3/lpjml_output/2026_04_23_global_droughtexp_10years/baseline/output/wscal.nc + .json
+------------------- ---- ----------- ------ ----- --- -------------------------
+No spinup years.
+First year:                    1960
+Last year:                     2010
+Number of grid cells:       1582563
+==============================================================================
+Memory allocated for output: 7,096 bytes/cell
+Simulation begins...
+
+                 Carbon flux (GtC/yr)                    Water (km3/yr)                Nitrogen (TgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1960   9.335   0.181   4.117   0.000   5.398    43337.8 11386.8  4127.3   946.3   754.6     83.9   612.6   809.5
+  1961  -5.496   0.201   4.494   0.000  -9.789    41959.6 11105.6  4658.1   933.2   706.6     85.0   601.3   828.5
+  1962  -7.965   0.201   4.571   0.000 -12.335    41500.1 11286.3  5060.5   970.1   693.6     92.5   595.3   835.8
+  1963  -8.508   0.201   4.597   0.000 -12.903    41751.2 11162.2  5220.4   919.5   687.9     99.5   642.8   830.0
+  1964  -7.991   0.202   4.627   0.000 -12.416    41425.7 10774.9  5631.9   958.6   709.3     99.8   603.2   822.0
+  1965  -9.402   0.202   4.664   0.000 -13.864    40411.2 10501.6  5641.0  1036.7   672.2    102.1   647.2   826.9
+  1966  -8.127   0.202   4.566   0.000 -12.491    41421.1 10723.1  6127.8  1037.7   708.6    107.7   616.2   821.9
+  1967  -7.811   0.203   4.610   0.000 -12.218    41447.1 10726.6  6369.8   959.8   707.1    110.4   603.9   815.9
+  1968  -6.858   0.203   4.528   0.000 -11.183    41642.4 10705.1  6726.2  1046.0   725.7    115.4   615.5   842.3
+  1969  -7.917   0.202   4.573   0.000 -12.287    40735.6 10393.5  6868.9   987.3   704.9    111.2   711.3   823.9
+  1970 -42.031   0.203   2.257   0.000 -44.081     9890.5  1346.4     5.5  1725.9   144.6     28.0   326.6   362.0
+  1971 -47.389   0.204   1.298   0.000 -48.478     2318.6   252.1     5.9  1862.9    12.0      1.6   340.1   123.5
+  1972 -41.523   0.205   1.222   0.000 -42.540     1110.6   204.7     5.8  1876.7    44.5      0.3   374.0   115.9
+  1973 -37.246   0.205   1.215   0.000 -38.256      789.3   193.1     5.9  1823.8    50.6      0.2   405.1   114.3
+  1974 -33.181   0.205   1.197   0.000 -34.172      678.3   188.7     5.6  1832.5    51.0      0.2   432.6   114.2
+  1975 -30.519   0.205   1.224   0.000 -31.538      645.7   185.6     5.8  1830.2    51.7      0.2   452.8   115.2
+  1976 -27.747   0.205   1.227   0.000 -28.768      640.6   183.0     5.9  1869.0    51.9      0.1   462.4   116.5
+  1977 -26.393   0.205   1.213   0.000 -27.401      618.9   180.5     5.7  1825.3    50.2      0.1   470.3   114.4
+  1978 -24.733   0.205   1.206   0.000 -25.734      614.6   177.5     5.7  1822.5    49.8      0.1   474.5   115.6
+  1979 -23.752   0.205   1.211   0.000 -24.758      615.3   180.2     5.6  1845.2    49.4      0.1   478.2   115.4
+  1980 -23.122   0.211   3.485   0.000 -26.396     1870.1 47882.6   135.9   999.5   167.7      0.3  5389.8   228.1
+  1981 -13.860   0.204   4.401   0.000 -18.057     5803.1 49640.3   490.6   967.9   400.4      0.4  2153.9   490.3
+  1982  -2.909   0.198   4.577   0.000  -7.287    10747.9 44101.0  1662.9   994.3   546.7      0.5  1658.0   782.0
+  1983   7.312   0.191   4.580   0.000   2.929    13155.3 39983.6  2147.3   922.5   647.9      1.0  1461.9   726.7
+  1984  37.157   0.178   4.720   0.000  32.617    33619.5 21857.3  4400.4   947.5  1089.6     22.0  1074.7   721.6
+
+                 Carbon flux (GtC/yr)                    Water (km3/yr)                Nitrogen (TgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  1985  14.149   0.174   4.749   0.000   9.574    34040.3 16485.9 10751.1   979.5   763.4     49.5   838.8   785.6
+  1986   6.839   0.181   4.755   0.000   2.265    36310.4 14263.3 10300.5   977.1   702.4     61.6   734.7   819.2
+  1987   2.314   0.188   4.693   0.000  -2.190    36633.6 13135.7  9099.9   959.1   661.1     65.9   668.8   827.9
+  1988   2.691   0.194   4.703   0.000  -1.818    37789.1 12620.8  9422.1   942.0   666.4     70.1   667.7   847.5
+  1989   0.954   0.199   4.809   0.000  -3.656    38664.1 11988.5  9336.8   986.4   637.0     74.8   576.1   855.0
+  1990  -0.139   0.201   4.848   0.000  -4.786    38369.7 11941.9  8725.5   924.8   640.0     76.1   632.7   894.5
+  1991  -1.572   0.202   4.821   0.000  -6.191    37972.8 11718.4  8395.4   938.4   595.7     75.1   578.6   848.1
+  1992  -0.507   0.203   4.845   0.000  -5.149    37906.1 11720.1  8059.5   983.1   615.3     77.9   582.9   888.6
+  1993   0.488   0.203   4.945   0.000  -4.253    38115.5 11725.6  8426.4   900.2   637.4     79.2   614.9   904.8
+  1994  -1.855   0.203   4.828   0.000  -6.480    37235.4 11449.4  8440.4   929.9   588.3     76.8   544.7   867.2
+  1995  -0.167   0.203   4.786   0.000  -4.749    37620.0 11705.0  8378.6   926.5   633.9     79.5   544.6   888.2
+  1996   0.464   0.203   4.820   0.000  -4.152    37777.8 11473.1  8556.1   894.2   616.2     78.5   555.1   885.3
+  1997   0.935   0.203   4.890   0.000  -3.752    38125.7 11748.6  7976.2   908.8   639.4     81.2   543.3   889.2
+  1998   0.397   0.204   4.802   0.000  -4.201    37440.2 12050.6  8241.8   837.6   644.4     79.1   639.3   871.8
+  1999   0.703   0.203   4.902   0.000  -3.994    37747.8 11485.0  8728.2   921.5   645.0     81.7   496.2   896.2
+  2000   1.243   0.203   4.891   0.000  -3.444    38364.2 11337.1  8644.4   996.5   654.5     83.0   544.8   886.1
+  2001   0.518   0.204   4.883   0.000  -4.161    37693.3 11338.0  8238.7   928.5   648.1     80.6   570.8   866.9
+  2002  -0.336   0.204   4.865   0.000  -4.997    36544.1 11559.4  7797.8   912.0   652.0     77.9   549.3   876.2
+  2003   1.292   0.204   4.912   0.000  -3.416    36866.6 11877.8  7745.7   863.4   681.8     80.1   524.8   878.4
+  2004   2.854   0.204   5.039   0.000  -1.981    37570.1 11673.3  7741.9   920.8   709.5     82.9   514.6   896.2
+  2005   1.603   0.204   4.913   0.000  -3.104    36626.1 11862.9  7486.1   908.4   699.1     80.5   520.0   845.4
+  2006   2.774   0.204   4.912   0.000  -1.934    37665.9 11642.1  7760.3   928.1   704.4     83.8   494.5   841.4
+  2007   3.023   0.204   4.923   0.000  -1.695    37129.4 11581.4  7599.6   928.2   739.2     82.7   536.2   857.8
+  2008   3.327   0.204   5.011   0.000  -1.480    36608.3 11373.2  7692.3   878.4   726.0     82.4   473.5   841.7
+  2009   3.456   0.204   5.047   0.000  -1.386    36721.1 11613.4  7319.7   907.3   740.6     84.1   494.7   868.6
+
+                 Carbon flux (GtC/yr)                    Water (km3/yr)                Nitrogen (TgN/yr)
+       --------------------------------------- ---------------------------------- --------------------------------
+Year   NEP     estab   harvest product NBP     transp     evap    interc  wd      nuptake ndemand  nlosses ninflux
+------ ------- ------- ------- ------- ------- ---------- ------- ------- ------- ------- -------- ------- -------
+  2010   4.750   0.204   4.979   0.000  -0.024    36947.4 12222.6  7384.5   832.1   765.2     85.6   589.2   860.8
+Simulation ended.
+lpjml successfully terminated, 1582563 grid cells processed.
+Wall clock time:	22318 sec, 0.00028 sec/cell/year.
+Total wall clock time:	22473 sec (06:14:33).
