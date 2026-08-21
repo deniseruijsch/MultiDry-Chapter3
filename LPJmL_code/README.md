@@ -2,7 +2,7 @@
 
 This repository contains the **LPJmL 5.10.1** source code modified for the simulations presented in:
 
-> **[INSERT PAPER TITLE]**
+"Improving the representation of drought-induced tree mortality in LPJmL-5"
 
 The original LPJmL model was developed by the Potsdam Institute for Climate Impact Research (PIK) and its contributors.
 
@@ -31,4 +31,4 @@ This code is based on LPJmL, which is distributed under the **GNU Affero General
 ### Contact
 
 Denise Ruijsch  
-[INSERT EMAIL]
+d.ruijsch@uu.nl
